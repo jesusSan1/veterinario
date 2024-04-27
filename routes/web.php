@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', [AnimalsController::class, 'index'])->name('principal.index');
+
+Route::post('/create', [AnimalsController::class, 'create'])->name('principal.create');
