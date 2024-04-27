@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [AnimalsController::class, 'index'])->name('principal.index');
 
 Route::post('/create', [AnimalsController::class, 'create'])->name('principal.create');
+
+Route::get('/destroy/{id}', [AnimalsController::class, 'destroy'])->name('principal.destroy');

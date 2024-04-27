@@ -29,4 +29,11 @@ class AnimalsController extends Controller
             return redirect()->back()->with('success', 'Datos guardados correctamente');
         }
     }
+
+    public function destroy($id)
+    {
+        $animal = Animal::find($id);
+        $animal->delete();
+        return redirect()->back()->with('success', 'Elemento eliminado');
+    }
 }

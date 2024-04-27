@@ -59,8 +59,16 @@
                     <th scope="row">{{$animal->titulo}}</th>
                     <td>{{$animal->nombre}}</td>
                     <td>{{$animal->descripcion}}</td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        <a href="" class="btn btn-warning">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{{route('principal.destroy', $animal->id)}}" class="btn btn-danger">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </td>
                     </tr>
                     @endforeach
                 </tbody>
