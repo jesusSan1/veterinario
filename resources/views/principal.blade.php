@@ -60,7 +60,7 @@
                     <td>{{$animal->nombre}}</td>
                     <td>{{$animal->descripcion}}</td>
                     <td>
-                        <a href="" class="btn btn-warning">
+                        <a href="{{route('principal.show', $animal->id)}}" class="btn btn-warning">
                             <i class="fas fa-edit"></i>
                         </a>
                     </td>

@@ -36,4 +36,20 @@ class AnimalsController extends Controller
         $animal->delete();
         return redirect()->back()->with('success', 'Elemento eliminado');
     }
+
+    public function show($id)
+    {
+        $animal = Animal::find($id);
+        return view('show', compact('animal'));
+    }
+
+    public function update($id, Request $request)
+    {
+        $animal = Animal::find($id);
+        $animal->titulo = $request->input('title');
+        $animal->nombre = $request->input('name');
+        $animal->descripcion = $request->input('description');
+        $animal->save();
+        return redirect()->to('/')->with('success', 'Elemento editado correctamente');
+    }
 }
