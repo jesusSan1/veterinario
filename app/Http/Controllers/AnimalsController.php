@@ -9,7 +9,8 @@ class AnimalsController extends Controller
 {
     public function index()
     {
-        return view('principal');
+        $animals = Animal::simplePaginate(5);
+        return view('principal', compact('animals'));
     }
 
     public function create(Request $request)

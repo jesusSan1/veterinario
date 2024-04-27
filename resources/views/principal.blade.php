@@ -42,5 +42,29 @@
     </div>
     <div class="col-md-8">
         {{-- Table --}}
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead class="table-dark">
+                    <tr>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($animals as $animal)
+                    <tr>
+                    <th scope="row">{{$animal->titulo}}</th>
+                    <td>{{$animal->nombre}}</td>
+                    <td>{{$animal->descripcion}}</td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 @endsection
